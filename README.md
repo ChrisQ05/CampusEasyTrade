@@ -5,11 +5,11 @@ CampusUsedGoodsSystem/
 ├── CampusUsedGoodsSystem.sln              # Visual Studio解决方案文件
 ├── CampusUsedGoodsSystem.vcxproj         # 项目文件
 ├── src/
-│   ├── main.cpp                          # 项目主文件
+│   ├── main.cpp                          # 项目主文件，负责初始化和主循环
 │   │
-│   ├── Core/                             
-│   │   ├── definitions.h                 # 所有数据结构定义
-│   │   ├── utils.h                       # 工具函数声明
+│   ├── Core/                             # 核心数据结构和全局定义存
+│   │   ├── definitions.h                 # 存放所有 typedef struct (User, Goods, Transaction, MapLocation等)
+│   │   ├── utils.h                       # 通用工具函数，如ID生成、时间转换、字符串处理等
 │   │   └── utils.cpp                     # 工具函数实现
 │   │
 │   ├── DataAccess/                       
@@ -20,36 +20,33 @@ CampusUsedGoodsSystem/
 │   ├── Application/                      
 │   │   ├── UserManager/                  
 │   │   │   ├── user_manager.h           # 用户管理接口
-│   │   │   └── user_manager.cpp          # 用户管理实现
+│   │   │   └── user_manager.cpp          # 用户注册、登录、信息管理、信用分
 │   │   │
 │   │   ├── GoodsManager/                 
 │   │   │   ├── goods_manager.h          # 商品管理接口
-│   │   │   └── goods_manager.cpp         # 商品管理实现
+│   │   │   └── goods_manager.cpp         # 商品发布、浏览、搜索、状态管理、收藏
 │   │   │
 │   │   ├── TransactionManager/           
 │   │   │   ├── transaction_manager.h     # 交易管理接口
-│   │   │   └── transaction_manager.cpp    # 交易管理实现
+│   │   │   └── transaction_manager.cpp    # 购物车、订单、交易、评价
 │   │   │
 │   │   ├── Innovation/                   # 创新功能模块
 │   │   │   ├── MapNavigation/           
 │   │   │   │   ├── map_navigation.h     
-│   │   │   │   └── map_navigation.cpp   
-│   │   │   │
-│   │   │   ├── LivePreview/              
-│   │   │   │   ├── live_preview.h       
-│   │   │   │   └── live_preview.cpp     
+│   │   │   │   └── map_navigation.cpp   # 地图绘制、路径规划、取货点
 │   │   │   │
 │   │   │   ├── AIEvaluation/             
 │   │   │   │   ├── ai_evaluation.h      
-│   │   │   │   └── ai_evaluation.cpp    
+│   │   │   │   └── ai_evaluation.cpp    # 智能估价算法、图表生成
 │   │   │   │
 │   │   │   ├── CourseMaterial/           
 │   │   │   │   ├── course_material.h    
-│   │   │   │   └── course_material.cpp  
+│   │   │   │   └── course_material.cpp  # 课程资料管理、审核
+│   │   │   │   
 │   │   │   │
 │   │   │   └── CampusActivities/          
 │   │   │       ├── campus_activities.h  
-│   │   │       └── campus_activities.cpp
+│   │   │       └── campus_activities.cpp # 活动融合、主题市集
 │   │   │
 │   │   └── SystemUtils/                  # 辅助功能模块
 │   │       ├── security_system.h         
