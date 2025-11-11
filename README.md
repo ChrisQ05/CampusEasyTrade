@@ -11,7 +11,7 @@ A lightweight, modular trading system built with C++ — supporting user managem
 - **可视化交互**：简洁 UI 引导操作，降低使用门槛（基于 `ui_manager`）。
 
 ## 🛠️ 技术栈
-- 开发语言：C++（兼容 C++11 及以上标准）
+- 开发语言：C
 - 数据存储：纯文本文件（无需数据库依赖）
 - 架构设计：模块化分层（UI 层、业务层、数据层分离）
 - 测试支持：单元测试覆盖核心业务逻辑
@@ -20,25 +20,7 @@ A lightweight, modular trading system built with C++ — supporting user managem
 
 ### 环境要求
 - 编译器：支持 C++11 及以上的 GCC、Clang 或 MSVC
-- 系统：Windows/macOS/Linux（跨平台兼容）
-
-### 编译与运行
-1. 克隆仓库到本地
-   ```bash
-   git clone https://github.com/your-username/simpTrade.git
-   cd simpTrade
-   ```
-2. 编译项目（以 GCC 为例）
-   ```bash
-   g++ main.cpp ui_manager.cpp credit_system.cpp data_manager.cpp item_manager.cpp user_data_manager.cpp -o simpTrade
-   ```
-3. 运行程序
-   ```bash
-   # Windows
-   simpTrade.exe
-   # macOS/Linux
-   ./simpTrade
-   ```
+- 系统：Windows
 
 ## 📂 项目目录结构
 ```
@@ -145,23 +127,6 @@ flowchart LR
     reviews -.-> reviewStruct
     credit -.-> creditStruct
 ```
-
-
-## 🧪 测试运行
-项目包含核心功能的单元测试，编译并运行测试文件即可验证逻辑：
-```bash
-# 测试信用系统
-g++ test_credit_system.cpp credit_system.cpp -o test_credit && ./test_credit
-# 测试购买流程
-g++ test_purchase.cpp item_manager.cpp user_data_manager.cpp credit_system.cpp -o test_purchase && ./test_purchase
-```
-
-## 🤝 贡献指南
-1. Fork 本仓库
-2. 创建特性分支（`git checkout -b feature/xxx`）
-3. 提交代码（`git commit -m "add xxx feature"`）
-4. 推送分支（`git push origin feature/xxx`）
-5. 发起 Pull Request
 
 ## 📄 许可证
 本项目采用 [MIT License](LICENSE) 开源协议，允许自由使用、修改与分发。
